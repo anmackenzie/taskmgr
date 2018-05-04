@@ -1,0 +1,8 @@
+<!--/*********************
+AUTHORSHIP DOCUMENT
+
+Ashton MacKenzie
+Task and House Management Project
+Begun for Spring 2018 semester
+Web 225
+*********************/-->
