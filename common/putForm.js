@@ -44,11 +44,12 @@ const INPUT_END ="'></td>        </tr>";
 /********************/
 /*******Classes*********/
 class FormField {
-	constructor(name, label, type, size=0){
+	constructor(name, label, type, size=0, value=""){
 		this.name = name;
 		this.label = label;
 		this.type = type;
 		this.size = size;
+		this.value = value;
 	}
  writeNameField(){
 		/*	Purpose:write fields which will take name data
@@ -59,7 +60,7 @@ class FormField {
 	 */
 
 		var nameFieldContents = INPUT_START + this.label + INPUT_MID + this.type ;
-		nameFieldContents += " name=''" + this.name + "' " + INPUT_END;
+		nameFieldContents += "' name='" + this.name + INPUT_END;
 		return nameFieldContents;
 	}
 
@@ -74,9 +75,10 @@ function writeStartForm(name, id, label){
  *		Post: form and table are opened and labelled.
  known issue: form is closed, then form elements are written out.
  */
-	var tableFormStart = "	<form name='" + name + "' id='"+ id + "'>";
+	var tableFormStart = "	<form name='" + name + "' id='"+ id + "' ";
+	tableFormStart += "onsubmit='return val_data(\"" + name + "\")' method='post' >";
 	tableFormStart += "<table>	<thead>	<tr> <td colspan='2'>";
-	tableFormStart += "<h1>" + label +"</h1></td></tr></thead>";
+	tableFormStart += "<h1>" + label +"</h1></td></tr></thead><tbody>";
 	document.getElementById("target").innerHTML += tableFormStart;
 }
 
@@ -92,7 +94,7 @@ function writeEndForm(num){
 	tableFormEnd += num;
 	tableFormEnd += "' value='Send Data'>            	<input type='reset' name='r";
 	tableFormEnd += num;
-	tableFormEnd += "' value='Clear Data'>           </td>        </tr> 	</table>    </form>";
+	tableFormEnd += "' value='Clear Data'>           </td>        </tr></tbody> 	</table>    </form>";
 
 	document.getElementsByTagName("table")[i].innerHTML += tableFormEnd;
 

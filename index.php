@@ -10,6 +10,7 @@ include './htm/authorship.txt';
 	<script src="./common/putForm.js" type="text/javascript"> </script>
 	<script src="./common/login.js" type="text/javascript"> </script>
 	<script src="./common/validation.js" type="text/javascript"> </script>
+	<script src="./common/datahandling.js" type="text/javascript"> </script>
 </head>
 
 <body>

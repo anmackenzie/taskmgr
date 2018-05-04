@@ -52,6 +52,7 @@ var orgFormFields = [
 ]
 
 //will reflect how many times the buttons have been pressed
+//eventually, replace with static members of their respective functions
 var logsNum = 1;
 var regsNum = 1;
 var orgsNum = 1;
@@ -61,12 +62,15 @@ function onClickLogin(){
 	/*	Purpose:present login fields
 	 *		Pre:Login Selected
 	 *		Post:prevent multiple sessions with same browser
-	TODO: some method of unsetting logsNum other than refreshing the login page. use sessionStorage
+	TODO: some method of unsetting logsNum other than refreshing the login page.
+	 use sessionStorage
 	 */
 	if (logsNum == 1 && regsNum == 1){
 		writeStartForm('log','log','Login');
 		var tables = document.getElementsByTagName("table");
-		tables[logsNum-1].innerHTML += userFormFields[2].writeNameField();
+		for (i=0; i < 4; i++){
+			tables[logsNum-1].innerHTML += userFormFields[i].writeNameField();
+		}
 		writeEndForm(logsNum);
 		logsNum++;
 	}
