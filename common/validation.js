@@ -45,7 +45,7 @@ function val_data(name){
     var value = field.value;
 
     if (type == "input"){
-      if(!RegExpText.test(value)){
+      if(!RegExpText.test(value) && value != ""){
         alert("Please enter valid text.");
         document.getElementsByName(name)[0].focus();
         document.getElementsByName(name)[0].select();
@@ -64,6 +64,15 @@ function val_data(name){
       else {
         console.log("password validation success");
       }
+    }
+    else if(type == "email")
+    if(!RegExpEmail.test(value)){
+      alert("Please enter a valid email.");
+      document.getElementsByName(name)[0].focus();
+      document.getElementsByName(name)[0].select();
+    }
+    else {
+      console.log("email validation success");
     }
   });
 
