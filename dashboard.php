@@ -15,16 +15,16 @@ include './htm/authorship.txt';
 	<script src="./common/taskHandling.js" type="text/javascript"> </script>
 </head>
 
-<body onload="logo();">
+<body onload="logo(); displayUserCookie();">
 	<img src-"#" id="logo" alt="logo" title="logo" />
 
 	<h1>House Manager Login Page</h1>
 
-	<p>Welcome <span id="name"></span>, to the household management project. You can add tasks and mark them as completed.</p>
+	<p>Welcome <span id="name"></span>, to the household management project.
+		You can add tasks and mark them as completed in a later version of the project.</p>
 <form name="dashboardTaskControl">
-<button type="button" id="dashboardTaskControl1" onclick="onClickLogin();">Login</button>
-<button type="button" id="dashboardTaskControl2" onclick="onClickRegister();">Register</button>
-<button type="button" id="dashboardTaskControl3" onclick="onClickRegisterOrg();">New Organization</button>
+<button type="button" id="dashboardTaskControl1" onclick="#">Add Task</button>
+<button type="button" id="dashboardTaskControl2" onclick="#">View All</button>
 </form>
 <div id="target">
 </div>

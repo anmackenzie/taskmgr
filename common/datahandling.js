@@ -66,4 +66,42 @@ class task {
 }
 /********************/
 /********functions******/
+function findCookie(val) {
+    var cookie = null;
+    var findVal = val + "=";
+    var dc = document.cookie;
+    if (dc.length > 0)
+    {
+       var start = dc.indexOf(findVal);
+       if (start >= 0)
+       {
+          start += findVal.length;
+          lastVal = dc.indexOf(";", start);
+          if (lastVal == -1)
+          {
+             lastVal = dc.length;
+          }
+          cookie = (dc.substring(start, lastVal));
+          }
+          else
+          {
+             return cookie;
+          }
+        }
+		return cookie;
+}
+
+function displayUserCookie(){
+  var userCookie = new user();
+  userCookie.userName = findCookie("userName");
+  document.getElementById("name").innerHTML = userCookie.userName;
+
+  userCookie.orgName = findCookie("orgName");
+  userCookie.orgPass = findCookie("orgPass");
+
+    var showCookieContents = "Your organization is " + userCookie.orgName;
+      showCookieContents += " and your shared word is " + userCookie.orgPass;
+  document.getElementById("target").innerHTML += showCookieContents;
+
+}
 /********************/
