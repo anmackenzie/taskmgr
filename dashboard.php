@@ -15,7 +15,9 @@ include './htm/authorship.txt';
 	<script src="./common/taskHandling.js" type="text/javascript"> </script>
 </head>
 
-<body>
+<body onload="logo();">
+	<img src-"#" id="logo" alt="logo" title="logo" />
+
 	<h1>House Manager Login Page</h1>
 
 	<p>Welcome <span id="name"></span>, to the household management project. You can add tasks and mark them as completed.</p>

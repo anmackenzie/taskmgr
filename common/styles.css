@@ -3,10 +3,17 @@
 Task Manager Project
 Alpha version  as Term Project for WEB 225 SP18
 Ashton MacKenzie
+
+sources:
+how do I select by depth?
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+doesn't specifically say on that page, but does note that * is a valid
+input and you can select by parent...
+
 */
 
 body {
-	background-color:#F0ECAF;
+	background-color:#a4c5fc;
 }
 /* form, thead, tbody, tr, td, input{
 	border:1px solid black;
@@ -14,4 +21,10 @@ body {
 img#logo{
 	width:100;
 	height:100;
+}
+body > *{
+	background-color: #94bcfc;
+}
+body > * > * {
+	background-color: #79a9f7;
 }
