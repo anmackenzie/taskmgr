@@ -11,9 +11,12 @@ include './htm/authorship.txt';
 	<script src="./common/login.js" type="text/javascript"> </script>
 	<script src="./common/validation.js" type="text/javascript"> </script>
 	<script src="./common/datahandling.js" type="text/javascript"> </script>
+	<script src="./common/images.js" type="text/javascript"> </script>
+
 </head>
 
-<body>
+<body onload="logo();">
+<img src-"#" id="logo" alt="logo" title="logo" />
 	<h1>House Manager Login Page</h1>
 
 	<p>Welcome to the household management project. If this is your first time using the project, you may need to create a group and some user accounts.</p>

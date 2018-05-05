@@ -11,3 +11,7 @@ body {
 /* form, thead, tbody, tr, td, input{
 	border:1px solid black;
 } */
+img#logo{
+	width:100;
+	height:100;
+}

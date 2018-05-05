@@ -24,7 +24,8 @@ https://stackoverflow.com/a/10964175/4674553
 */
 /********************/
 /********variables******/
-
+var time = new Date();
+var expdate = time.getDate()+(60*60*24*1000*7);
 /********************/
 /********regular expressions******/
 var RegExpText = /^[A-Z a-z]+$/;
@@ -74,7 +75,14 @@ function val_data(name){
     else {
       console.log("email validation success");
     }
+    else {
+      console.log("total validation success");
+      bakeCookies(name,value);
+    }
   });
 
+}
+function bakeCookies(name,value){
+  document.cookie= name + "=" + value + "; expires="+expdate+";path='/'";
 }
 /********************/

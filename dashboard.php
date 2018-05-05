@@ -7,6 +7,7 @@ include './htm/authorship.txt';
 <meta charset="utf-8">
 <title>House Manager dashboard Page</title>
 	<link rel="stylesheet" type="text/css" href="./common/styles.css" />
+	<script src="./common/images.js" type="text/javascript"> </script>
 	<script src="./common/putForm.js" type="text/javascript"> </script>
 	<script src="./common/login.js" type="text/javascript"> </script>
 	<script src="./common/validation.js" type="text/javascript"> </script>
