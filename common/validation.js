@@ -47,8 +47,8 @@ function val_data(name){
     if (type == "input"){
       if(!RegExpText.test(value) && value != ""){
         alert("Please enter valid text.");
-        document.getElementsByName(name)[0].focus();
-        document.getElementsByName(name)[0].select();
+        document.getElementById(name)[0].focus();
+        document.getElementById(name)[0].select();
           }
       else {
         console.log("input validation success");
@@ -58,8 +58,8 @@ function val_data(name){
     else if(type == "password"){
       if(!RegExpAlphaNum.test(value)){
         alert("Please enter a valid password. No special characters.");
-        document.getElementsByName(name)[0].focus();
-        document.getElementsByName(name)[0].select();
+        document.getElementById(name)[0].focus();
+        document.getElementById(name)[0].select();
       }
       else {
         console.log("password validation success");
@@ -68,8 +68,8 @@ function val_data(name){
     else if(type == "email")
     if(!RegExpEmail.test(value)){
       alert("Please enter a valid email.");
-      document.getElementsByName(name)[0].focus();
-      document.getElementsByName(name)[0].select();
+      document.getElementById(name)[0].focus();
+      document.getElementById(name)[0].select();
     }
     else {
       console.log("email validation success");

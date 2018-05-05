@@ -66,7 +66,7 @@ function onClickLogin(){
 	 use sessionStorage
 	 */
 	if (logsNum == 1 && regsNum == 1){
-		writeStartForm('log','log','Login');
+		writeStartForm('log','log','Login','dashboard.php');
 		var tables = document.getElementsByTagName("table");
 		for (i=0; i < 4; i++){
 			tables[logsNum-1].innerHTML += userFormFields[i].writeNameField();
@@ -89,7 +89,7 @@ function onClickRegister(){
 
 		if(logsNum == 1 && orgsNum == 1){
 			var regFormNum = 'regForm'+regsNum;// uniquely identify form
-			writeStartForm(regFormNum,regFormNum,'User Registration '+regsNum);
+			writeStartForm(regFormNum,regFormNum,'User Registration '+regsNum,'dashboard.php');
 			//write all the registration fields using their method
 			userFormFields.forEach(function(field){
 				tables[regsNum-1].innerHTML += field.writeNameField();
@@ -113,7 +113,7 @@ var tables = document.getElementsByTagName("table");
 	if(regsNum == 1 && logsNum == 1){
 		var orgFormNum = 'orgForm'+orgsNum; //uniquely identify forms
 
-		writeStartForm(orgFormNum,orgFormNum,'Organization Registration '+orgsNum);
+		writeStartForm(orgFormNum,orgFormNum,'Organization Registration '+orgsNum,'dashboard.php');
 			//write all the registration fields using their method
 			orgFormFields.forEach(function(field){
 				tables[regsNum-1].innerHTML += field.writeNameField();

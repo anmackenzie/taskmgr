@@ -67,16 +67,17 @@ class FormField {
 }
 /********************/
 /*******functions*********/
-function writeStartForm(name, id, label){
+function writeStartForm(name, id, label, action){
 /*	Purpose: write the beginning of a form out to the document.
  *		Pre: helper function. Called by functions like writeOut (login.js)
 		Param: name of form,label of form, id of form. later may also take
 		document.target.
  *		Post: form and table are opened and labelled.
  known issue: form is closed, then form elements are written out.
+ workaround: form elements written to child element of form
  */
-	var tableFormStart = "	<form name='" + name + "' id='"+ id + "' ";
-	tableFormStart += "onsubmit='return val_data(\"" + name + "\")' method='post' >";
+	var tableFormStart = "	<form name='" + name + "' id='"+ id + "' action='";
+	tableFormStart += action +"' onsubmit='return val_data(\"" + name + "\")' method='post' >";
 	tableFormStart += "<table>	<thead>	<tr> <td colspan='2'>";
 	tableFormStart += "<h1>" + label +"</h1></td></tr></thead><tbody>";
 	document.getElementById("target").innerHTML += tableFormStart;
